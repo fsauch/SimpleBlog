@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+
+  <div class="blog-post">
+    <h2 class="blog-post-title">{{ article["title"] }}</h2>
+    <p class="blog-post-meta">{{ article["date"] }} by <a href="#">Francis</a></p>
+    <p>{{article["content"]|safe}}</p>
+  </div>
+
+  	{% if session.logged %}
+  	<div class="metanav">
+    	<a href="{{ url_for('edit_post', id=article["id"]) }}">Edit</a>
+    	<a href="{{ url_for('delete_post', id=article["id"]) }}">Delete</a>
+        {% if article["draft"] %}
+    	<a href="{{ url_for('publish', id=article["id"]) }}">Publish</a>
+        {% else %}
+    	<a href="{{ url_for('unpublish', id=article["id"]) }}">Unpublish</a>
+        {%endif%}
+  	</div>
+  	{% endif %}
+{% endblock %}

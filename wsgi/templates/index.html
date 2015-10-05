@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+  {% for article in articles %}
+    {% if session.logged or not article["draft"]%}
+      <div class="blog-article">
+        <h2><a href=/view/{{ article["id"] }} class="blog-post-link">{{ article["title"] }}</a></h2>
+        <p class="blog-post-meta">{{ article["date"] }} by <a href="#">Francis</a></p>
+        <h4 class="blog-abstract">{{article["abstract"]}}</h4>
+        <p>{{article["content"] | safe}}</p>
+      </div>
+      <hr>
+    {% endif %}
+  {% else %}
+    <em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  {% if pagination.has_prev %}
+  <a href="{{url_for('index', page=pagination.page-1)}}">Previous</a>
+  {% endif %}
+  {% if pagination.has_next %}
+  <a href="{{url_for('index', page=pagination.page+1)}}">Next</a>
+  {% endif %}
+{% endblock %}

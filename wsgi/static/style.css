@@ -1,0 +1,158 @@
+article,aside,figure,footer,header,hgroup,nav,section,hgroup{display:block}
+html{background:#e2e2e2;color:black; }
+
+/* Title and banner */
+#title_image{
+  display:block; 
+  object-fit:cover
+}
+h1{
+  text-align:left; 
+  font-family: 
+  'Squada One', cursive; 
+  margin:0; 
+  font-size:3em;
+  background:black;
+  line-height:2em; 
+  color:#e2e2e2
+}
+
+/* layout */
+#page{
+  background:white; 
+  margin: 0 auto
+}
+#frame{
+  background:white; 
+  margin: 1em 3em 2em; 
+  display:inline-block; 
+  width:55em
+}
+#content {
+  display:inline-block; 
+  width:80%
+}
+#tags {
+  width:15%; 
+  padding:10px; 
+  display:inline-block; 
+  vertical-align:top; 
+  margin-left:20px; 
+  float:right
+}
+
+/* side menu */
+#tags ul,li {
+  list-style: none;
+  margin:0;
+  padding-left: 0;
+  text-align:left;
+  font-size:14px
+}
+#tags a {
+  color:#004C80
+}
+
+/* Basic */
+body{
+  font-family:'Roboto', sans-serif;
+  padding:0;
+  margin:1em auto;
+  width:60em;
+  line-height:1.25;
+  word-spacing:0.1em; 
+  font-size:16px
+}
+article h1,h2{
+  text-align:left;
+  font-size:1.3em;
+  line-height:2.154;
+  font-family:'Ubuntu';
+  margin:0
+}
+
+/*Links*/
+h2 a{
+  background:transparent;
+  text-decoration:none;
+  border-bottom:1px dotted
+}
+h2 a:hover{
+  border-bottom:1px solid
+}
+h2 a{
+  color:inherit !important
+}
+a {
+  background:transparent;
+  text-decoration:none
+}
+a:link{
+  color:#f2f2f2
+}
+nav a:hover{
+  color:#f2f2f2
+}
+a:hover{
+  color:green
+}
+a:visited{
+  color:#1b67c9
+}
+a.simple{
+  border:0 !important;
+  float:left;
+  display:block;
+  margin-right:20px
+}
+
+/* paragraphs */
+p{
+  margin:1em 0;
+  font-weight:normal
+}
+p.code{
+  font-family: 'Droid Sans Mono'; 
+  display: inline-block; 
+  margin: 0 0 0 1em; 
+  font-size:0.8em; 
+  color:#444444
+}
+
+/* article */
+article header,section header{
+  background:white;
+  color:black;
+  margin:0;
+  padding:0
+}
+article h1,section h1{
+  letter-spacing:0;
+  text-align:left;
+  margin:0 0; 
+  font-size:2em;
+  background:white; 
+  color:black
+}
+
+/* time */
+time{
+  float:right;
+  font-size:small;
+  margin:2px 0 0 0
+}
+
+/* Navigation bar */
+nav{
+  margin:2
+}
+nav ul{
+  margin:0;
+  padding:0 0 0 0;
+  text-align:left; 
+  background:black;
+}
+nav li{
+  display:inline;
+  padding-left:3em
+}
